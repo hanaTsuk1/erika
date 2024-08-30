@@ -8,3 +8,7 @@
 ## Introduction
 
 Extract the values of document properties and display them in the file tree
+
+## Screenshot
+
+![](./docs/screenshot.png)
