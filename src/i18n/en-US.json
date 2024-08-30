@@ -1,0 +1,39 @@
+{
+  "frontmatter": {
+    "raw": "Raw value",
+    "date": "Date"
+  },
+  "list": {
+    "header": {
+      "text": "Display Item"
+    },
+    "type": {
+      "name": "Type",
+      "desc": "Select the type of display value"
+    },
+    "key": {
+      "name": "Property name",
+      "desc": "Extract the corresponding value from the editor properties"
+    },
+    "format": {
+      "name": "Date format",
+      "desc": "Convert the raw value",
+      "visit": "Visit ",
+      "doc": "moment document",
+      "example": "Converted format: {{value}}"
+    },
+    "button": {
+      "add": "Add another display item",
+      "remove": "Delete the current display item"
+    }
+  },
+  "general": {
+    "header": {
+      "text": "General setting"
+    },
+    "separator": {
+      "name": "Separator",
+      "desc": "Symbols for separating display items"
+    }
+  }
+}

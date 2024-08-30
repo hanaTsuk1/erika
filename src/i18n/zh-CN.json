@@ -1,0 +1,39 @@
+{
+	"frontmatter": {
+		"raw": "原始值",
+		"date": "日期"
+	},
+	"list": {
+    "header": {
+      "text": "展示项"
+    },
+		"type": {
+			"name": "类型",
+			"desc": "选择展示值的类型"
+		},
+		"key": {
+			"name": "属性名",
+			"desc": "从文档属性中提取对应的值"
+		},
+		"format": {
+			"name": "日期格式",
+			"desc": "对原始值进行转换",
+      "visit": "查看",
+      "doc": "moment文档",
+			"example": "转化后的格式: {{value}}"
+		},
+    "button": {
+      "add": "再添加一个展示项",
+      "remove": "删除当前展示项"
+    }
+	},
+  "general": {
+    "header": {
+      "text": "常规设置"
+    },
+    "separator": {
+      "name": "分隔符",
+      "desc": "分隔展示项的符号"
+    }
+  }
+}

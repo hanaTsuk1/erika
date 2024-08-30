@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
+	"id": "erika",
+	"name": "Erika",
+	"version": "0.1.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "Display the frontmatter key in the file explorer",
+	"author": "hanaTsuk1",
+	"authorUrl": "https://github.com/hanaTsuk1",
 	"isDesktopOnly": false
 }
