@@ -46,6 +46,12 @@ export default class ErikaPlugin extends Plugin {
     this.addSettingTab(new SettingTab(this.app, this));
 
     this.init()
+
+    this.registerEvent(
+      this.app.metadataCache.on("changed", async (file) => {
+        this.updateFileDisplay(file)
+      })
+    );
   }
 
   onunload() {
@@ -111,15 +117,22 @@ export default class ErikaPlugin extends Plugin {
     const { fileItems } = this.fileExplorer
 
     for (const path in fileItems) {
-      const item = fileItems[path];
-      const { file, selfEl } = item
-
+      const { file } = fileItems[path];
       if (file instanceof TFile) {
-        const frontmatter = this.app.metadataCache.getFileCache(file)?.frontmatter
-        const text = this.calcDisplayText(frontmatter)
-        selfEl.setAttribute('data-erika-value', text)
+        this.updateFileDisplay(file)
       }
     }
+  }
+
+  updateFileDisplay(file: TFile) {
+    if (!this.fileExplorer) {
+      return
+    }
+    const { fileItems } = this.fileExplorer
+    const { selfEl } = fileItems[file.path];
+    const frontmatter = this.app.metadataCache.getFileCache(file)?.frontmatter
+    const text = this.calcDisplayText(frontmatter)
+    selfEl.setAttribute('data-erika-value', text)
   }
 
   calcDisplayText(frontmatter?: FrontMatterCache) {
