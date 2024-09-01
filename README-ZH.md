@@ -12,3 +12,10 @@
 ## 截图
 
 ![](./docs/screenshot-ZH.png)
+
+## 参考
+
+部分代码参考自下列仓库
+
++ [novel-word-count-obsidian](https://github.com/isaaclyman/novel-word-count-obsidian)
++ [file-explorer-note-count](https://github.com/ozntel/file-explorer-note-count)
