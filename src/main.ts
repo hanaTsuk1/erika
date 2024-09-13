@@ -166,6 +166,18 @@ class SettingTab extends PluginSettingTab {
 
     containerEl.empty();
 
+    new Setting(containerEl)
+      .setName(i18next.t('general.separator.name'))
+      .setDesc(i18next.t('general.separator.desc'))
+      .addText((text) => {
+        text
+          .setValue(this.plugin.settings.separator)
+          .onChange(async (value) => {
+            this.plugin.settings.separator = value
+            await this.plugin.saveAndUpdateDisplay();
+          })
+      });
+
     for (let i = 0; i < this.plugin.settings.list.length; i++) {
       const item = this.plugin.settings.list[i]
       const hasMore = i > 0
@@ -268,20 +280,5 @@ class SettingTab extends PluginSettingTab {
           });
       });
 
-    new Setting(containerEl)
-      .setHeading()
-      .setName(i18next.t('general.header.text'))
-
-    new Setting(containerEl)
-      .setName(i18next.t('general.separator.name'))
-      .setDesc(i18next.t('general.separator.desc'))
-      .addText((text) => {
-        text
-          .setValue(this.plugin.settings.separator)
-          .onChange(async (value) => {
-            this.plugin.settings.separator = value
-            await this.plugin.saveAndUpdateDisplay();
-          })
-      });
   }
 }

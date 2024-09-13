@@ -28,9 +28,6 @@
     }
 	},
   "general": {
-    "header": {
-      "text": "常规设置"
-    },
     "separator": {
       "name": "分隔符",
       "desc": "分隔展示项的符号"

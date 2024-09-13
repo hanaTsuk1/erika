@@ -5,7 +5,7 @@
   },
   "list": {
     "header": {
-      "text": "Display Item"
+      "text": "Display item"
     },
     "type": {
       "name": "Type",
@@ -28,9 +28,6 @@
     }
   },
   "general": {
-    "header": {
-      "text": "General setting"
-    },
     "separator": {
       "name": "Separator",
       "desc": "Symbols for separating display items"
